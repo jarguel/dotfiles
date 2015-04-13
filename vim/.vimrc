@@ -13,11 +13,11 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   " Required:
-  set runtimepath+=/home/jeremie/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/jeremie/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -33,6 +33,11 @@ NeoBundle  'vim-scripts/snipMate.git'
 NeoBundle  'kien/ctrlp.vim'
 NeoBundle  'Kocha/vim-systemc'
 NeoBundle  'sudar/vim-arduino-syntax'
+NeoBundle  'Shougo/unite.vim'
+NeoBundle  'mattn/webapi-vim'
+NeoBundle  'tyru/open-browser.vim'
+NeoBundle  'basyura/unite-yarm'
+NeoBundle  'timcharper/textile.vim'
 
 "NeoBundle 'Shougo/neosnippet.vim'
 "NeoBundle 'Shougo/neosnippet-snippets'
@@ -213,3 +218,8 @@ autocmd BufWinLeave * call clearmatches()
 
 " taglists
 let Tlist_Use_Right_Window = 1
+
+" textile
+let g:TextileOS="Linux"
+let g:TextileBrowser="/usr/bin/google-chrome"
+
